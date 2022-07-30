@@ -1,0 +1,10 @@
+version: "3"
+services:
+  go_pdf:
+    build: ./
+    ports:
+      - '8080:8080'
+    command: doctron --config /root/default.yaml
+    volumes:
+      - ./conf:/root
+#      - ./static:/static
